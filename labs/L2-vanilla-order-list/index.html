@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Order List - Lab L2</title>
+    </head>
+
+    <body>
+        <h1>Order List</h1>
+
+        <label for="search-input">Search orders:</label>
+
+        <input
+            type="search"
+            id="search-input"
+            placeholder="Search by code or customer name"
+            autocomplete="off"
+        />
+
+        <p id="status" role="status">Loading orders...</p>
+
+        <button id="retry-btn" type="button" hidden>Try Again</button>
+
+        <ul id="order-list"></ul>
+
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>
