@@ -3,9 +3,10 @@ import OrderRow from "./OrderRow";
 
 interface OrderListProps {
     orders: Order[];
+    onViewDetails?: (order: Order) => void;
 }
 
-export default function OrderList({ orders }: OrderListProps) {
+export default function OrderList({ orders, onViewDetails }: OrderListProps) {
     if (orders.length === 0) {
         return <p>No orders found.</p>;
     }
@@ -13,7 +14,11 @@ export default function OrderList({ orders }: OrderListProps) {
     return (
         <ul className="order-list">
             {orders.map((order) => (
-                <OrderRow key={order.id} order={order} />
+                <OrderRow
+                    key={order.id}
+                    order={order}
+                    onViewDetails={onViewDetails}
+                />
             ))}
         </ul>
     );

@@ -24,7 +24,7 @@ export default function OrderListPage() {
                     signal: controller.signal,
                 });
 
-                if (!response.ok) {
+                if (!response.ok) { 
                     throw new Error(`HTTP ${response.status}`);
                 }
 
