@@ -1,6 +1,5 @@
-import OrderHooksPage from "../labs/L4-order-hooks/OrderHooksPage";
-import "./App.css";
+import ZustandOrderBuilder from "../labs/L5-order-builder/zustand/ZustandOrderBuilder";
 
 export default function App() {
-    return <OrderHooksPage />;
+    return <ZustandOrderBuilder />;
 }
